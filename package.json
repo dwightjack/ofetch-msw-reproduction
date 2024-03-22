@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.11.1",
+    "ofetch": "file:ofetch-1.3.3.tgz",
+    "ofetch-stable": "npm:ofetch@^1.3.4"
+  },
+  "devDependencies": {
+    "msw": "^2.2.10"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  },
+  "pnpm": {
+    "overrides": {
+      "ofetch": "./ofetch-1.3.3.tgz"
+    }
+  }
+}
